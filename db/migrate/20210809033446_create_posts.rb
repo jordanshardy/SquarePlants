@@ -10,7 +10,6 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :room_type
       t.string :watering
       t.string :strain
-
       t.timestamps
     end
   end
