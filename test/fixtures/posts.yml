@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyText
+  age: 1
+  grow_medium: MyString
+  training_method: MyString
+  light_type: MyString
+  room_type: MyString
+  watering: MyString
+  strain: MyString
+
+two:
+  name: MyString
+  content: MyText
+  age: 1
+  grow_medium: MyString
+  training_method: MyString
+  light_type: MyString
+  room_type: MyString
+  watering: MyString
+  strain: MyString
