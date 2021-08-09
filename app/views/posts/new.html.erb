@@ -1,4 +1,7 @@
 <h1>New Post</h1>
+<% if @post.errors.any?%>
+  <h2>The following errors prevented the article from being saved</h2>
+<% end %> 
 
 <%= render 'form', post: @post %>
 
