@@ -22,12 +22,12 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post
-    else
-      render 'new'
-    end
-    
+    # if @post.save
+    #   redirect_to @post
+    # else
+    #   render 'new'
+    # end
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }

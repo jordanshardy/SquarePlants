@@ -1,6 +1,26 @@
-<p id="notice"><%= notice %></p>
+<h1 id="heading" class="text-center mt-4">Public Posts</h1>
 
-<h1>Posts</h1>
+<% @posts.each do |post| %>
+<div class="column">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.name %></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= post.grow_medium %></li>
+        <li class="list-group-item"><%= post.room_type %></li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "See Post", post_path(post), class: "btn btn-outline-success" %>
+        <%= link_to "See Clones", post_path(post), class: "btn btn-outline-success" %>
+      </div>
+    </div>
+</div>
+<% end %>
+
+
+<p id="notice"><%= notice %></p>
 
 <table>
   <thead>
