@@ -36,13 +36,6 @@
     <%= form.text_field :price %>
   </div>
 
-  <div class="field">
-    <%= form.number_field :post_id,
-      id: :listing_post_id, class:"form-control", 
-      value: current_user.post_id, type: :hidden
-    %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>

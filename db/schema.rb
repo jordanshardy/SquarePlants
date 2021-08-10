@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 2021_08_09_101948) do
     t.boolean "available"
     t.integer "quantity"
     t.float "price"
-    t.bigint "post_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "post_id", null: false
     t.index ["post_id"], name: "index_listings_on_post_id"
   end
 
