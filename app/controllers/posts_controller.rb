@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: %i[ show edit update destroy ]
+  # before_action :require_same_user, only: [:edit, :update, :destroy]
 
   # GET /posts or /posts.json
   def index
@@ -68,4 +69,11 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :content, :age, :grow_medium, :training_method, :light_type, :room_type, :watering, :strain)
     end
+
+  #    def require_same_user
+  #   if current_user != @post.user
+  #     flash[:alert] = "You can only edit or delete your own article"
+  #     redirect_to @post
+  #   end
+  # end
 end

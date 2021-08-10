@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_listing, only: %i[ show edit update destroy ]
 
   # GET /listings or /listings.json
@@ -14,6 +14,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+
   end
 
   # GET /listings/1/edit
@@ -23,7 +24,7 @@ class ListingsController < ApplicationController
   # POST /listings or /listings.json
   def create
     @listing = current_user.listing.new(listing_params)
-
+    if current_user.
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: "Listing was successfully created." }

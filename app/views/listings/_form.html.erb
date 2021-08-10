@@ -37,8 +37,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :post_id %>
-    <%= form.text_field :post_id %>
+    <%= form.number_field :post_id,
+      id: :listing_post_id, class:"form-control", 
+      value: current_user.post_id, type: :hidden
+    %>
   </div>
 
   <div class="actions">
