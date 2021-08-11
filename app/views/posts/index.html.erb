@@ -1,23 +1,23 @@
 <h1 id="heading" class="text-center mt-4">Posts</h1>
 
-
-<div class="column">
-  <% @posts.each do |post| %>
-    <div class="card" style="width: 18rem;">
-    <%= image_tag post.picture, class: "card-img top thumbnail" if post.picture.attached?  %>
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><%= post.name %></h5>
+<div class='container'>
+  <div class='row row-cols-sm-1 row-cols-md-2 row-cols-lg-4'>
+    <% @posts.each do |post| %>
+      <div class='col mb-4'>
+        <div class='card border-dark h-100'>
+          <%= image_tag post.picture, class: "card-img top thumbnail" if post.picture.attached?  %>
+          <div class='card-body'>
+            <h5><%= post.name %></h5>
+            <h6 class='card-subtitle text-muted'>Added <%= time_ago_in_words(post.created_at) %> ago</h6>
+            <p class='card-text text-secondary text-truncate'><%= post.content %></p>
+            <div class='d-flex justify-content-between'>
+              <%= link_to "See More", post_path(post.id), class: "btn btn-primary" %>
+              <h5><%= post.room_type %></h5>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= post.grow_medium %></li>
-        <li class="list-group-item"><%= post.room_type %></li>
-      </ul>
-      <div class="card-body">
-        <%= link_to "See Post", post_path(post), class: "btn btn-outline-success" %>
-        <%= link_to "See Clones", post_path(post), class: "btn btn-outline-success" %>
-      </div>
-    </div>
     <% end %>
+  </div>
 </div>
 

@@ -67,13 +67,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :content, :age, :grow_medium, :training_method, :light_type, :room_type, :watering, :strain)
+      params.require(:post).permit(:name, :picture, :content, :age, :grow_medium, :training_method, :light_type, :room_type, :watering, :strain)
     end
-
-  #    def require_same_user
-  #   if current_user != @post.user
-  #     flash[:alert] = "You can only edit or delete your own article"
-  #     redirect_to @post
-  #   end
-  # end
+  
 end

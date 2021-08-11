@@ -1,3 +1,26 @@
+<h2 class="text-center mt-4"><%= @post.name %></h2>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-header font-italic">
+        <%= image_tag @post.picture, class: "card-img top thumbnail" if @post.picture.attached? %>
+        </div>
+          <div class="card-body">
+            <div class="card-text text-left"><%= simple_format(@post.content) %></div>
+            <%=link_to "Edit", edit_post_path(@post.id), class: "btn btn-warning mr-3" if current_user && current_user.id == @post.user_id%>
+            <%=link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-danger mr-3" if current_user && current_user.id == @post.user_id%>
+          </div>
+        <div class="card-footer text-muted">
+          <small>Created <%= time_ago_in_words(@post.created_at) %> ago, 
+          edited <%= time_ago_in_words(@post.updated_at) %> ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
