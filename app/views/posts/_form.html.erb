@@ -51,9 +51,12 @@
     <%= form.text_field :watering %>
   </div>
 
-  <div class="field">
-    <%= form.label :strain %>
-    <%= form.text_field :strain %>
+  <h5 class='mb-3'>Picture</h5>
+  <div class='form-group mb-3'>
+    <%= form.label :picture, class: 'form-label' %>
+    <%= form.file_field :picture, accepts: "image/png,image/jpg,image/jpeg", class: 'form-control-file' %>
+    <br />
+    <small class='form-text text-muted'>PNG, JPG and JPEG only</small>
   </div>
 
   <div class="actions">

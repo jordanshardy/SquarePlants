@@ -22,7 +22,9 @@ class ListingsController < ApplicationController
 
   # POST /listings or /listings.json
   def create
-    @listing = current_user.listings.new(listing_params)
+    @listing = Listing.new(listing_params)
+    @post = Post.find_by(user_id: current_user.id)
+    @listing.post_id = @post.id
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: "Listing was successfully created." }
