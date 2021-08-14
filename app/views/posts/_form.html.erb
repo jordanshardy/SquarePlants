@@ -52,13 +52,6 @@
   </div>
 
 
-
-  <div class="field">
-    <%= form.label :categories %>
-    <%= form.collection_select :category_ids, Category.order(:category), :id, :category, {},
-    {class: 'form-control select2', multiple: true} %>
-  </div>
-
   <h5 class='mb-3'>Image</h5>
   <div class='form-group mb-3'>
     <%= form.label :picture, class: 'form-label' %>
