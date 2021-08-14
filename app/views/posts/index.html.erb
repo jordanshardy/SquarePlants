@@ -1,19 +1,38 @@
 <h1 id="heading" class="text-center mt-4">Posts</h1>
 
-<div class='container'>
+  <div class="row-md-2">
 
+  <div class="card mt-3">
+    <div class="card-header" >
+      <h6>Categories</h6>
+    </div>
+
+    <div class="card-body">
+      <ul class="list-group">
+        <% @categories.each do |category| %>
+          <li class="list-group-item d flex justify-content-between align-items-center"></li>
+          <%= link_to category.category, posts_path(:cate => category.id) %>
+          <span class="badge badge-primary badge-pill"><%= category.posts.count %></span>
+          <% end %>
+      </ul>
+    </div>
+    
   </div>
-  <div class='row row-cols-sm-1 row-cols-md-2 row-cols-lg-4'>
+  </div>
+
+
+  <%= link_to "All Posts", posts_path %>
+  <div class='row row-cols-md-1 row-cols-md-2 row-cols-lg-4'>
     <% @posts.each do |post| %>
       <div class='col mb-4'>
-        <div class='card border-dark h-100'>
+        <div class='card border-mid h-100'>
           <%= image_tag post.picture, class: "card-img top thumbnail" if post.picture.attached?  %>
           <div class='card-body'>
             <h5><%= post.name %></h5>
             <h6 class='card-subtitle text-muted'>Added <%= time_ago_in_words(post.created_at) %> ago</h6>
             <p class='card-text text-secondary text-truncate'><%= post.content %></p>
             <div class='d-flex justify-content-between'>
-              <%= link_to "See More", post_path(post.id), class: "btn btn-primary" %>
+              <%= link_to "See More", post_path(post.id), class: "btn btn-success text-white" %>
               <h5><%= post.room_type %></h5>
             </div>
           </div>
@@ -21,5 +40,5 @@
       </div>
     <% end %>
   </div>
-</div>
+
 

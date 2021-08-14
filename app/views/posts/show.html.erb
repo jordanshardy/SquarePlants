@@ -8,10 +8,22 @@
         <%= image_tag @post.picture, class: "card-img top thumbnail" if @post.picture.attached? %>
         </div>
           <div class="card-body">
-        
-            <div class="card-text text-left"><%= simple_format(@post.content) %></div>
-            <%=link_to "Edit", edit_post_path(@post.id), class: "btn btn-warning mr-3" if current_user && current_user.id == @post.user_id%>
-            <%=link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-danger mr-3" if current_user && current_user.id == @post.user_id%>
+            <p>Category: <%= @post.category.category %></p>
+            <ul>
+              <strong>Name:</strong>
+              <%= @post.name %> |
+              <strong>Age:</strong>
+              <%= @post.age %> |
+              <strong>Grow medium:</strong>
+              <%= @post.grow_medium %> |
+              <strong>Light type:</strong>
+              <%= @post.light_type %> |
+              <strong>Watering:</strong>
+              <%= @post.watering %>
+            </ul>
+            <div class="card-text text-center"><%= simple_format(@post.content) %></div>
+            <%=link_to "Edit", edit_post_path(@post.id), class: "btn btn-warning mr-3 text-white" if current_user && current_user.id == @post.user_id%>
+            <%=link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-danger mr-3 text-white" if current_user && current_user.id == @post.user_id%>
           </div>
         <div class="card-footer text-muted">
           <small>Created <%= time_ago_in_words(@post.created_at) %> ago, 
@@ -21,50 +33,3 @@
     </div>
   </div>
 </div>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @post.age %>
-</p>
-
-<p>
-  <strong>Grow medium:</strong>
-  <%= @post.grow_medium %>
-</p>
-
-<p>
-  <strong>Training method:</strong>
-  <%= @post.training_method %>
-</p>
-
-<p>
-  <strong>Light type:</strong>
-  <%= @post.light_type %>
-</p>
-
-<p>
-  <strong>Room type:</strong>
-  <%= @post.room_type %>
-</p>
-
-<p>
-  <strong>Watering:</strong>
-  <%= @post.watering %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post.id) if current_user && current_user.id == @post.user_id %> 
-<%= link_to 'Back', posts_path %> |
-<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>

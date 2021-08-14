@@ -51,6 +51,8 @@
     <%= form.text_field :watering %>
   </div>
 
+  <%= form.select :category_id, Category.all.map {|c| [c.category, c.id]} %>
+
 
   <h5 class='mb-3'>Image</h5>
   <div class='form-group mb-3'>
