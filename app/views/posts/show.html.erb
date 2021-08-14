@@ -8,6 +8,9 @@
         <%= image_tag @post.picture, class: "card-img top thumbnail" if @post.picture.attached? %>
         </div>
           <div class="card-body">
+          <ul class="list-unstyled nav">
+            <%= render @post.categories %>
+            </ul>
             <div class="card-text text-left"><%= simple_format(@post.content) %></div>
             <%=link_to "Edit", edit_post_path(@post.id), class: "btn btn-warning mr-3" if current_user && current_user.id == @post.user_id%>
             <%=link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-danger mr-3" if current_user && current_user.id == @post.user_id%>

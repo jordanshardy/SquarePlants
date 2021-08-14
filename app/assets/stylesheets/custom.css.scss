@@ -48,3 +48,16 @@ body {
   height: 30vw;
   object-fit: cover;
 }
+
+.category-link {
+  padding: 5px;
+  a {
+    color: white;
+
+    .bg-secondary {
+      &:hover {
+        background-color: lighten(#6c757d, 12.5) !important;
+      }
+    }
+  }
+}
