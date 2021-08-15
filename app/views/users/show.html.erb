@@ -1,0 +1,10 @@
+<h2>User Profile</h2>
+<h4>Name:</h4>
+<span></span>
+<p><%= @user.full_name %></p>
+<h4>Phone Number:</h4>
+<span></span>
+<p><%= @user.phone_number %></p>
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'btn btn-success text-white' %>
+<% end %>
