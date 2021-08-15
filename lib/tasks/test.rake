@@ -1,3 +1,0 @@
-task :post do 
-  
-end
