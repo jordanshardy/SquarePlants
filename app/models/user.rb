@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :listings
+  has_one_attached :picture
 
   def full_name
     "#{first_name} #{last_name}"

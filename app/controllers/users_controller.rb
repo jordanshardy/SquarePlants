@@ -30,6 +30,8 @@ class UsersController < ApplicationController
       :first_name,
       :last_name,
       :phone_number,
+      :bio,
+      :picture
     )
   end
 
