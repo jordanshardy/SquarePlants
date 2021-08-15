@@ -70,9 +70,44 @@ Squareplants gives people an extra source of income by selling their plants/clon
 
 ### Screenshots
 
-## Homepage
+## Home Page
 
-![home page](/images/logo.png)
+<a name="homepage"></a>
+
+<img src="app/assets/images/homepage.png">
+<a name="homepage"></a>
+
+<img src="app/assets/images/homepage2.png">
+
+### Posts Page
+
+<a name="posts"></a>
+
+<img src="app/assets/images/posts.png">
+
+### Sign Up
+
+<a name="signup"></a>
+
+<img src="app/assets/images/signup.png">
+
+### Listings
+
+<a name="Listings"></a>
+
+<img src="app/assets/images/listings.png">
+
+### Profile
+
+<a name="profile"></a>
+
+<img src="app/assets/images/profile.png">
+
+### Update Profile
+
+<a name="updateprofile"></a>
+
+<img src="app/assets/images/updateprofile.png">
 
 ### Target Audience
 
@@ -128,11 +163,48 @@ Squareplants gives people an extra source of income by selling their plants/clon
 
 ## Wireframes
 
+### Homepage
+
+<a name="homepage"></a>
+
+<img src="app/assets/images/wireframe-home.png">
+
+### Post
+
+<a name="post"></a>
+
+<img src="app/assets/images/wireframe-post.png">
+
+### Listing
+
+<a name="listing"></a>
+
+<img src="app/assets/images/wireframe-listing.png">
+
+### Profile
+
+<a name="profile"></a>
+
+<img src="app/assets/images/wireframe-profile.png">
+
+### SignUp
+
+<a name="signup"></a>
+
+<img src="app/assets/images/wireframe-signup.png">
 ## Entity Relationship Diagrams
 
 ### Initial ERD
 
+<a name="initialerd"></a>
+
+<img src="app/assets/images/intialerd.png">
+
 ### Final ERD
+
+<a name="erdfinal"></a>
+
+<img src="app/assets/images/erdfinal.png">
 
 ## Explain the different high-level components in your app
 
@@ -224,3 +296,9 @@ In this app I used Trello to track tasks. Trello is a project management tool th
 Adding priorities to the cards and tasks is also a good way to prioritize each task within the app, especially when it comes to an app assignment this this where different features and functionality is necessary and others are optional.
 
 After cards leave the doing section they move on to completed. If an existing card or task/feature needs adjustment or I want to add styling etc to
+
+[Link to Trello Board](https://trello.com/b/5jikdmwl/t2a2-marketplace-project)
+
+<a name="trello"></a>
+
+<img src="app/assets/images/trello.png">
