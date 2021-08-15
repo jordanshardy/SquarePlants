@@ -34,7 +34,7 @@ After then creating a new rails app called test-app with no added files, we trie
 
 <img src="app/assets/images/error1.png">
 
-This shows that the error is not in my app, but with rails itself and thus, I don't feel I should be marked down on the deployment piece of the requirements.
+This shows that the error is not in my app, but with rails itself???
 
 ## Installation
 
