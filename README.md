@@ -13,6 +13,7 @@ update rakefile
 update/amend gemfile
 gemfile.lock
 update --add-platform x86_64-linux
+RAILS_SERVE_STATIC_FILES in heroku config vars
 heroku run bundle exec rake -P
 RAILS_ENV=production bundle exec rake assets:precompile
 update bundler
