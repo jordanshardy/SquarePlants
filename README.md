@@ -13,7 +13,7 @@ update rakefile
 update/amend gemfile
 gemfile.lock
 update --add-platform x86_64-linux
-bundle exec rake -P
+heroku run bundle exec rake -P
 RAILS_ENV=production bundle exec rake assets:precompile
 update bundler
 rake assets:precompile --dry-run
