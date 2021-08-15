@@ -68,7 +68,7 @@ Squareplants gives people an extra source of income by selling their plants/clon
 
 <img src="app/assets/images/sitemap.png">
 
-### Screenshots
+## Screenshots
 
 ## Home Page
 
