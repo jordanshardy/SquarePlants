@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = Post.find(params[:id])
   end
 
   def edit
@@ -30,8 +31,12 @@ class UsersController < ApplicationController
       :last_name,
       :phone_number,
       :bio,
-      :picture,
+      :picture
     )
   end
+
+  def post_params
+      params.require(:post).permit(:name, :picture, :content, :age, :grow_medium, :training_method, :light_type, :room_type, :watering, :strain, :category_id)
+    end
 
 end

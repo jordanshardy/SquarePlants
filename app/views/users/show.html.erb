@@ -9,3 +9,7 @@
 <% if current_user.id == @user.id %>
   <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'btn btn-success text-white' %>
 <% end %>
+
+<% @posts.each do |post| %>
+  <%= post.inspect %>
+<% end %>
