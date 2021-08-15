@@ -12,10 +12,6 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
-import "bootstrap";
-import "select2";
-import "select2/dist/css/select2.css";
-
-$(document).on("turbolinks:load", () => {
-  $(".select2").select2();
-});
+//= require jquery3
+//= require popper
+//= require bootstrap
