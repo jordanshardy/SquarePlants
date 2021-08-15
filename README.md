@@ -30,6 +30,7 @@ The issue was still persisting and when trying to run heroku db:setup the rakefi
 
 After then creating a new rails app called test-app with no added files, we tried to push to heroku/run the setup and it threw the same error:
 
+
 <a name="error"></a>
 
 <img src="app/assets/images/error2.png">
