@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def home
-     @categories = Category.all
-
+    @categories = Category.all
     cate = params[:cate]
       if !cate.nil?
         @posts = Post.where(:category_id => cate)
@@ -11,7 +10,6 @@ class PagesController < ApplicationController
   end
 
   def about
-
   end
 
   private

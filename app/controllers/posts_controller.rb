@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @categories = Category.all
-
     cate = params[:cate]
       if !cate.nil?
         @posts = Post.where(:category_id => cate)
