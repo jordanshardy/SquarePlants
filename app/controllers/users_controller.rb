@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
 
   def index
-    @users = User.all
   end
 
   def show
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
       :last_name,
       :phone_number,
       :bio,
-      :picture
+      :picture,
     )
   end
 
