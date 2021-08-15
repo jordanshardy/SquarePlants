@@ -64,7 +64,7 @@ Squareplants gives people an extra source of income by selling their plants/clon
 
 ### Sitmap
 
-![sitemap](san-juan-mountains.jpg "sitemap")
+![sitemap](sitemap.png "sitemap")
 
 ### Screenshots
 
